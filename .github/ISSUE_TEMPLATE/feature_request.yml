@@ -1,0 +1,22 @@
+name: Feature Request
+description: Suggest a new probe, model backend, or analysis feature
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: What would you like?
+      placeholder: Describe the feature
+    validations:
+      required: true
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      options:
+        - New probe
+        - Model backend
+        - Analysis function
+        - Visualization
+        - CLI
+        - Other
