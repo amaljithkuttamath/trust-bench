@@ -90,6 +90,12 @@ class ResultMetadata:
     device: str
     duration_seconds: float
     canary: str = "canary-trust-bench-2026"
+    # Probe-specific fields (optional, populated by individual probes)
+    layer: int | None = None
+    total_tokens: int | None = None
+    bos_skipped: bool | None = None
+    n_prompts: int | None = None
+    n_categories: int | None = None
 
 
 @dataclass
