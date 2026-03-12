@@ -1,12 +1,13 @@
 import os
 import tempfile
 
-import torch
 import matplotlib
+import torch
+
 matplotlib.use("Agg")
 
 from trust_bench.models.base import FeatureActivations
-from trust_bench.viz.bars import top_features_bar, selectivity_bars
+from trust_bench.viz.bars import selectivity_bars, top_features_bar
 
 
 class TestTopFeaturesBar:

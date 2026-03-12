@@ -1,8 +1,9 @@
 import os
 import tempfile
 
-import torch
 import matplotlib
+import torch
+
 matplotlib.use("Agg")
 
 from trust_bench.models.base import FeatureActivations
