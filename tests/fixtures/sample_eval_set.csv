@@ -1,0 +1,5 @@
+group,text,expected
+fact,"The capital of France is",Paris
+fact,"Water boils at",100
+control,"The capital of Freedonia is",
+control,"The drug Zyloxitab treats",

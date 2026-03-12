@@ -1,0 +1,11 @@
+name: test-feature-survey
+description: "Test config for unit tests"
+model: llama-3.1-8b
+probe: feature_survey
+layer: 16
+prompts:
+  - category: english
+    texts: ["The cat sat on the mat."]
+output:
+  figures: true
+  report: true
