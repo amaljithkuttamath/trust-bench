@@ -11,6 +11,7 @@ from trust_bench.models.base import (
     TokenizedInput,
     TrustBenchError,
 )
+from trust_bench.models.registry import REGISTRY, get_model
 
 
 class TestTokenizedInput:
@@ -106,3 +107,18 @@ class TestErrors:
     def test_raise_model_load_error(self):
         with pytest.raises(ModelLoadError, match="Failed"):
             raise ModelLoadError("Failed to load model")
+
+
+class TestModelRegistry:
+    def test_registry_has_llama(self):
+        assert "llama-3.1-8b" in REGISTRY
+
+    def test_get_model_returns_backend(self):
+        model = get_model("llama-3.1-8b")
+        assert model.name == "llama-3.1-8b"
+        assert model.d_model == 4096
+        assert model.n_layers == 32
+
+    def test_get_model_unknown_raises(self):
+        with pytest.raises(ValueError, match="Unknown model"):
+            get_model("nonexistent-model")

@@ -10,6 +10,7 @@ from trust_bench.models.base import (
     TokenizedInput,
     TrustBenchError,
 )
+from trust_bench.models.registry import REGISTRY, get_model
 
 __all__ = [
     "ConfigError",
@@ -18,8 +19,10 @@ __all__ = [
     "ModelLoadError",
     "ProbeError",
     "ProbeResult",
+    "REGISTRY",
     "ResultMetadata",
     "SAEWrapper",
     "TokenizedInput",
     "TrustBenchError",
+    "get_model",
 ]
