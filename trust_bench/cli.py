@@ -8,11 +8,7 @@ from trust_bench.config import load_config
 from trust_bench.models.registry import get_model
 from trust_bench.probes.registry import get_probe
 from trust_bench.results.io import save_result
-
-
-def generate_report(result, config_path):
-    """Placeholder for report generation. Implemented in P1."""
-    pass
+from trust_bench.viz.report import generate_report
 
 
 @click.group()
@@ -26,7 +22,9 @@ def cli():
 @click.option("--device", default="auto", help="Device: auto, cpu, mps, cuda")
 @click.option("--max-prompts", default=None, type=int, help="Limit prompts for quick iteration")
 @click.option(
-    "--cache-dir", default=None, type=click.Path(),
+    "--cache-dir",
+    default=None,
+    type=click.Path(),
     help="Cache activations to disk for reuse across probes",
 )
 def run(config_path, device, max_prompts, cache_dir):
