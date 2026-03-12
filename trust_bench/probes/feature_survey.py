@@ -13,6 +13,25 @@ from trust_bench.models.base import (
 )
 from trust_bench.probes.base import Probe
 
+DEFAULT_SURVEY_PROMPTS = [
+    {"category": "english", "texts": [
+        "The cat sat on the mat.",
+        "She walked to the store and bought some milk.",
+    ]},
+    {"category": "french", "texts": [
+        "Le chat est assis sur le tapis.",
+        "Elle marche vers le magasin.",
+    ]},
+    {"category": "code", "texts": [
+        "def hello(): return 'world'",
+        "for i in range(10): print(i)",
+    ]},
+    {"category": "math", "texts": [
+        "2 + 2 = 4",
+        "The integral of x dx is x^2/2",
+    ]},
+]
+
 _TRUST_BENCH_VERSION = "0.1.0"
 _UNKNOWN_GIT_HASH = "unknown"
 _UNKNOWN_DEVICE = "unknown"
