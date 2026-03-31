@@ -1,7 +1,6 @@
 # Trust Bench
 
-Interpretability toolkit for understanding what happens inside language models. Probes SAE features, activations, and circuits. Generates publication-quality findings.
-
+Interpretability toolkit for understanding what happens inside language models. Probes SAE features, activations, and circuits.
 ## Install
 
 ```bash
